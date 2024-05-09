@@ -9,8 +9,6 @@ import com.ec.common.exception.ServiceException;
 
 /**
  * 安全服务工具类
- *
- * @author ec
  */
 public class SecurityUtils {
     /**
@@ -66,7 +64,6 @@ public class SecurityUtils {
 
     /**
      * 生成BCryptPasswordEncoder密码
-     *
      * @param password 密码
      * @return 加密字符串
      */
@@ -77,7 +74,6 @@ public class SecurityUtils {
 
     /**
      * 判断密码是否相同
-     *
      * @param rawPassword     真实密码
      * @param encodedPassword 加密后字符
      * @return 结果
@@ -89,7 +85,6 @@ public class SecurityUtils {
 
     /**
      * 是否为管理员
-     *
      * @param userId 用户ID
      * @return 结果
      */

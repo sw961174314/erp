@@ -7,8 +7,6 @@ import com.ec.common.utils.sql.SqlUtil;
 
 /**
  * 分页工具类
- *
- * @author ec
  */
 public class PageUtils extends PageHelper {
     /**
@@ -19,6 +17,7 @@ public class PageUtils extends PageHelper {
         Integer pageNum = pageDomain.getPageNum();
         Integer pageSize = pageDomain.getPageSize();
         if (StringUtils.isNotNull(pageNum) && StringUtils.isNotNull(pageSize)) {
+            // 检查字符 防止注入
             String orderBy = SqlUtil.escapeOrderBySql(pageDomain.getOrderBy());
             Boolean reasonable = pageDomain.getReasonable();
             PageHelper.startPage(pageNum, pageSize, orderBy).setReasonable(reasonable);
