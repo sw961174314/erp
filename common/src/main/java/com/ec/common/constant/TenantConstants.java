@@ -1,9 +1,7 @@
 package com.ec.common.constant;
 
 /**
- * @Author: xxxx
- * @Date: xxx/xx/xx
- * @Description: 租户常量信息
+ * 租户常量信息
  */
 public class TenantConstants {
     /**

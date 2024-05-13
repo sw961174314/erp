@@ -18,6 +18,11 @@ public class AddressUtils {
     public static final String UNKNOWN = "XX XX";
     private static final Logger log = LoggerFactory.getLogger(AddressUtils.class);
 
+    /**
+     * 根据IP地址获取真实地址
+     * @param ip
+     * @return
+     */
     public static String getRealAddressByIP(String ip) {
         String address = UNKNOWN;
         // 内网不查询
