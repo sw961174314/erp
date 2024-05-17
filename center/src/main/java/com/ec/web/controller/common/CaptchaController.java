@@ -8,11 +8,11 @@ import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ec.common.config.ErpCrmConfig;
+import com.google.code.kaptcha.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.FastByteArrayOutputStream;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.google.code.kaptcha.Producer;
 import com.ec.common.constant.Constants;
 import com.ec.common.core.domain.AjaxResult;
 import com.ec.common.core.redis.RedisCache;

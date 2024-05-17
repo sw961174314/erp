@@ -5,11 +5,6 @@ import lombok.Data;
 
 import java.util.Date;
 
-/**
- * @Author: xxxx
- * @Date: 2021/7/25
- * @Description:
- */
 @Data
 public class MasterTenant extends BaseEntity {
     private Long id;

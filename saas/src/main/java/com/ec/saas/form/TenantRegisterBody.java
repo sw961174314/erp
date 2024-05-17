@@ -3,11 +3,6 @@ package com.ec.saas.form;
 import com.ec.common.core.domain.model.LoginBody;
 import lombok.Data;
 
-/**
- * @Author:
- * @Date:
- * @Description:
- */
 @Data
 public class TenantRegisterBody extends LoginBody {
 

@@ -7,8 +7,6 @@ import org.apache.ibatis.annotations.Mapper;
 
 /**
  * 租户
- *
- * @author ec
  */
 @Mapper
 public interface MasterTenantMapper {

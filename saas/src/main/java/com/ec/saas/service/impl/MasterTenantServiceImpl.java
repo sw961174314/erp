@@ -14,11 +14,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-/**
- * @Author:
- * @Date:
- * @Description:
- */
 @Service
 public class MasterTenantServiceImpl implements IMasterTenantService {
 

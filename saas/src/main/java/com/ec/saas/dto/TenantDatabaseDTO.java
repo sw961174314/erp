@@ -2,11 +2,6 @@ package com.ec.saas.dto;
 
 import lombok.Data;
 
-/**
- * @Author:
- * @Date:
- * @Description:
- */
 @Data
 public class TenantDatabaseDTO {
     public String tenantDatabase;

@@ -46,8 +46,13 @@ public class TenantInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String url = request.getServletPath();
+        System.out.println(url);
         String tenant = request.getHeader("tenant");
         log.info("&&&&&&&&&&&&&&&& 租户拦截 &&&&&&&&&&&&&&&&");
+        // 会拦截用户头像地址 需要进行排除
+        if (url.contains("/profile/avatar/")) {
+            return true;
+        }
         if (StringUtils.isNotBlank(tenant)) {
             if (!dynamicRoutingDataSource.existDataSource(tenant)) {
                 // 搜索默认数据库 去注册租户的数据源 下次进来直接session匹配数据源

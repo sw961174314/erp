@@ -79,8 +79,12 @@ public class TenantRegisterService {
             String tenantDatabaseUsername = tenantDatabase;
             String tenantDatabasePassword = ShortUUID.nextID();
 
+            // 用户创建
+            String createUserSQL = "CREATE USER '" + tenantDatabaseUsername + "'@'localhost' IDENTIFIED BY '" + tenantDatabasePassword + "'";
+            stmt.execute(createUserSQL);
+
             //用户授权
-            String grantSQL = "GRANT select, insert, update, delete ON " + tenantDatabase + ".* TO '" + tenantDatabaseUsername + "'@'localhost' IDENTIFIED BY '" + tenantDatabasePassword + "'";
+            String grantSQL = "GRANT select, insert, update, delete ON " + tenantDatabase + ".* TO '" + tenantDatabaseUsername + "'@'localhost'";
             stmt.execute(grantSQL);
 
             // 切换到

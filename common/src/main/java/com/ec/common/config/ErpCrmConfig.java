@@ -5,6 +5,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * 读取项目相关配置
+ *
+ * @author ec
  */
 @Component
 @ConfigurationProperties(prefix = "ec")
@@ -38,6 +40,30 @@ public class ErpCrmConfig {
      */
     private boolean demoEnabled;
 
+    public static String getProfile() {
+        return profile;
+    }
+
+    public void setProfile(String profile) {
+        ErpCrmConfig.profile = profile;
+    }
+
+    public static boolean isAddressEnabled() {
+        return addressEnabled;
+    }
+
+    public void setAddressEnabled(boolean addressEnabled) {
+        ErpCrmConfig.addressEnabled = addressEnabled;
+    }
+
+    public static String getCaptchaType() {
+        return captchaType;
+    }
+
+    public void setCaptchaType(String captchaType) {
+        ErpCrmConfig.captchaType = captchaType;
+    }
+
     /**
      * 获取导入上传路径
      */
@@ -64,30 +90,6 @@ public class ErpCrmConfig {
      */
     public static String getUploadPath() {
         return getProfile() + "/upload";
-    }
-
-    public static String getProfile() {
-        return profile;
-    }
-
-    public static void setProfile(String profile) {
-        ErpCrmConfig.profile = profile;
-    }
-
-    public static boolean isAddressEnabled() {
-        return addressEnabled;
-    }
-
-    public static void setAddressEnabled(boolean addressEnabled) {
-        ErpCrmConfig.addressEnabled = addressEnabled;
-    }
-
-    public static String getCaptchaType() {
-        return captchaType;
-    }
-
-    public static void setCaptchaType(String captchaType) {
-        ErpCrmConfig.captchaType = captchaType;
     }
 
     public String getName() {
